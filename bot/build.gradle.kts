@@ -1,4 +1,5 @@
 plugins {
+	java
 	kotlin("jvm") version "2.1.21"
 	kotlin("plugin.spring") version "2.1.21"
 	alias(libs.plugins.spring.boot)
@@ -35,12 +36,6 @@ dependencies {
 
 	//JDA dependency
 	implementation(libs.jda)
-}
-
-kotlin {
-	compilerOptions {
-		freeCompilerArgs.addAll("-Xjsr305=strict")
-	}
 }
 
 tasks.withType<Test> {
