@@ -1,3 +1,3 @@
 rootProject.name = "dota2managebot"
 
-include("bot")
+include("bot", "commands")

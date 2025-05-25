@@ -36,8 +36,6 @@ dependencies {
 
 	//JDA dependency
 	implementation(libs.jda)
-
-	implementation(project(":commands"))
 }
 
 tasks.withType<Test> {
