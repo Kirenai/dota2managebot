@@ -45,8 +45,6 @@ public class TeamCommand extends ListenerAdapter {
 
             event.deferReply(true).queue();
             event.getHook().sendMessage("This command is currently under development.").queue();
-
-            return;
         }
     }
 
