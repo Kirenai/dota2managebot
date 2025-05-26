@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 public class PingCommand extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        log.debug("Ping slash command interaction");
         if (event.getName().equals("ping")) {
+            log.debug("Ping slash command interaction");
             event.reply("Pong!").setEphemeral(true).queue();
         }
     }

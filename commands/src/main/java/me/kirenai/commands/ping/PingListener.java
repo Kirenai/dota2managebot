@@ -12,19 +12,20 @@ import org.springframework.stereotype.Component;
 public class PingListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        log.debug("Ping message received event");
 
         if (event.getAuthor().isBot()) return;
-        System.out.println(event.getAuthor());
-        System.out.println(event.getMessage());
-        System.out.println(event.getMember());
-        System.out.println(event.getChannel());
-        System.out.println(event.getChannelType());
-        System.out.println(event.isWebhookMessage());
+//        System.out.println(event.getAuthor());
+//        System.out.println(event.getMessage());
+//        System.out.println(event.getMember());
+//        System.out.println(event.getChannel());
+//        System.out.println(event.getChannelType());
+//        System.out.println(event.isWebhookMessage());
 
         Message message = event.getMessage();
         String content = message.getContentRaw();
         if (content.equals("!ping")) {
+            log.debug("Ping message received event");
+
             MessageChannelUnion channel = event.getChannel();
             channel.sendMessage("Pong!").queue();
         }
