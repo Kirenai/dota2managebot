@@ -113,6 +113,7 @@ public class TeamCommand extends ListenerAdapter {
                                         .setEphemeral(true)
                                         .queue();
                             }
-                    );        }
+                    );
+        }
     }
 }
